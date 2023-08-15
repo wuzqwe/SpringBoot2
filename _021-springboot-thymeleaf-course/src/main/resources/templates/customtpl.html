@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>使用其他目录模板条件</h3>
+<div th:insert="common/left :: html">
+
+</div>
+<br>
+<div th:include="common/left"></div>
+
+
+<p>使用模板</p>
+<div th:insert="~{head :: top}">
+    我是 div，insert 模板 top
+</div>
+<hr/>
+<p>insert 模板 2</p>
+<p th:insert="head :: top">
+    insert
+</p>
+
+<hr/>
+<br/>
+<p>包含</p>
+<div th:include="head :: top">
+    我是当前的 div
+</div>
+<hr/>
+<div th:include="footer :: html"></div>
+<hr/>
+<div th:include="footer" />
+</body>
+</html>

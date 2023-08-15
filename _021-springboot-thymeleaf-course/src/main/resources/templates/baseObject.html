@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baseObject</title>
+</head>
+<body>
+    <div style="margin-left: 400px">
+      <p>获取作用域中的数据</p>
+        <p th:text="${#request.getAttribute('requestData')}"></p>
+        <p th:text="${#session.getAttribute('sessionData')}"></p>
+        <p th:text="${session.loginName}"></p>
+
+        <br>
+        <br>
+        <h3>使用内置对象的方法</h3>
+        <span th:text="${#request.getRequestURI()}"></span>
+        <br>
+        <span >[[${#request.getContextPath()}]]</span>
+    </div>
+
+    <h3>param对象：表示请求的参数集合</h3>
+    <span th:text="${param.name}"></span><br>
+    <span th:text="${param.size()}"></span>
+</body>
+</html>

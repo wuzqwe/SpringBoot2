@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline</title>
+    <script type="text/javascript" th:inline="javascript">
+        var myname=[[${name}]];
+        var myage=[[${age}]];
+
+        alert("name:"+myname+"myage:"+myage)
+    </script>
+</head>
+<body>
+    <div style="margin-left: 400px">
+        <div th:inline="text">
+            <p>我是[[${name}]],年龄是[[${age}]]</p>
+        </div>
+    </div>
+</body>
+</html>

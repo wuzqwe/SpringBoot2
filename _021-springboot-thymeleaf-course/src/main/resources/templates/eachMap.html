@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环Map</title>
+</head>
+<body>
+    <div style="margin-left: 400px">
+        <div th:each="map,userStat:${mymap}">
+            <p th:text="${map.key}"></p>
+            <p th:text="${map.value}"></p>
+            <p th:text="${map.value.id}"></p>
+            <p th:text="${map.value.name}"></p>
+            <p th:text="${userStat.count}"></p>
+        </div>
+    </div>
+
+    <h3>循环List<《map》></h3>
+    <div th:each="lm:${listmap}">
+        <div th:each="m:${lm}">
+            <p th:text="${m.key}"></p>
+            <p th:text="${m.value.id}"></p>
+            <p th:text="${m.value.name}"></p>
+            <p th:text="${m.value.age}"></p>
+        </div>
+    </div>
+</body>
+</html>

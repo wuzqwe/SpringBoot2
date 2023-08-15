@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环遍历List</title>
+</head>
+<body>
+    <div style="margin-left: 400px">
+        <!--<div th:each="user,userIter:${myusers}">
+            <p th:text="${user.id}"></p>
+            <p th:text="${user.name}"></p>
+            <p th:text="${user.sex}"></p>
+            <p th:text="${user.age}"></p>
+        </div>-->
+
+        <table border="1" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <td> id 序号 </td>
+                    <td> name </td>
+                    <td> sex </td>
+                    <td> age </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user:${myusers}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.name}"></td>
+                    <td th:text="${user.sex}"></td>
+                    <td th:text="${user.age}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-left: 400px">
+        <div th:each="user:${userarry}">
+            <p th:text="${user.id}"></p>
+            <p th:text="${user.name}"></p>
+            <p th:text="${user.sex}"></p>
+            <p th:text="${user.age}"></p>
+        </div>
+    </div>
+</body>
+</html>
